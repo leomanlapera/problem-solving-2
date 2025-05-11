@@ -2,8 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { calculateTotalRevenue } from "./utils/calculateTotalRevenue";
 import type { Product, Sale } from "./types";
+import { findMostSoldProduct } from "./utils/findMostSoldProduct";
 
 const products: Product[] = [
   { id: 1, name: "Laptop", category: "Electronics", price: 999.99, stock: 50 },
@@ -24,7 +24,7 @@ const sales: Sale[] = [
 function App() {
   const [count, setCount] = useState(0);
 
-  console.log(calculateTotalRevenue(products, sales))
+  console.log(findMostSoldProduct(products, sales))
 
   return (
     <>
