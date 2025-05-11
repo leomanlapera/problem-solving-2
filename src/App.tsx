@@ -2,7 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { calculateTotalRevenue, type Product, type Sale } from "./utils/calculateTotalRevenue";
+import { calculateTotalRevenue } from "./utils/calculateTotalRevenue";
+import type { Product, Sale } from "./types";
 
 const products: Product[] = [
   { id: 1, name: "Laptop", category: "Electronics", price: 999.99, stock: 50 },
