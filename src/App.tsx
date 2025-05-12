@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import type { Product, Sale } from "./types";
-import { calculateAverageOrderValue } from "./utils/calculateAverageOrderValue";
+import { findLowStockProducts } from "./utils/findLowStockProducts";
 
 const products: Product[] = [
   { id: 1, name: "Laptop", category: "Electronics", price: 999.99, stock: 50 },
@@ -24,7 +24,7 @@ const sales: Sale[] = [
 function App() {
   const [count, setCount] = useState(0);
 
-  console.log(calculateAverageOrderValue(products, sales))
+  console.log(findLowStockProducts(products, 100))
 
   return (
     <>
