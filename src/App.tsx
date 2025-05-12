@@ -3,15 +3,15 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import type { Product, Sale } from "./types";
-import { findMostSoldProduct } from "./utils/findMostSoldProduct";
+import { getUniqueCustomersCount } from "./utils/getUniqueCustomersCount";
 
-const products: Product[] = [
-  { id: 1, name: "Laptop", category: "Electronics", price: 999.99, stock: 50 },
-  { id: 2, name: "Smartphone", category: "Electronics", price: 499.99, stock: 100 },
-  { id: 3, name: "Headphones", category: "Electronics", price: 99.99, stock: 200 },
-  { id: 4, name: "T-shirt", category: "Clothing", price: 19.99, stock: 300 },
-  { id: 5, name: "Jeans", category: "Clothing", price: 49.99, stock: 150 }
-];
+// const products: Product[] = [
+//   { id: 1, name: "Laptop", category: "Electronics", price: 999.99, stock: 50 },
+//   { id: 2, name: "Smartphone", category: "Electronics", price: 499.99, stock: 100 },
+//   { id: 3, name: "Headphones", category: "Electronics", price: 99.99, stock: 200 },
+//   { id: 4, name: "T-shirt", category: "Clothing", price: 19.99, stock: 300 },
+//   { id: 5, name: "Jeans", category: "Clothing", price: 49.99, stock: 150 }
+// ];
 
 const sales: Sale[] = [
   { id: 1, productId: 1, quantity: 2, date: "2024-03-01", customerId: 101 },
@@ -24,7 +24,7 @@ const sales: Sale[] = [
 function App() {
   const [count, setCount] = useState(0);
 
-  console.log(findMostSoldProduct(products, sales))
+  console.log(getUniqueCustomersCount(sales))
 
   return (
     <>
